@@ -1,33 +1,38 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import { Scene1 } from './smokescreen1.jsx'
+import { Scene2 } from './Akatray.jsx'
+
+
 
 function App() {
-  const [count, setCount] = useState(0)
+  
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <nav id="header">
+        <div>
+            <img src={'/logo.jpeg'} className="logo" alt="Smokescreen Logo" />
+        </div>
+        <ul>
+          <li>Products</li>
+          <li>Services</li>
+          <li>Gallery</li>
+        </ul>
+      </nav>
+
+      <div id="canvases">
+        <div id="canvas-container1">
+          <Scene1 />
+          <p id="redSS"> RedPuffer: $9.99 </p>
+          <button id="button1">Add To Cart</button>
+        </div>
+        <div id="canvas-container1">
+          <Scene2 />
+          <p>Rolling Tray: $19.99</p>
+          <button id="button1">Add To Cart</button>
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
   )
 }
