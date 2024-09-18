@@ -80,7 +80,7 @@ export function Scene1() {
 
             <pointLight position={[10, 10, 10]} intensity={1} />
             <ObjModel url="/SSCentered.obj" color='red'/>
-            <OrbitControls />
+            
             
         </Canvas>
         

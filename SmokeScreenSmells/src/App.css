@@ -11,6 +11,7 @@ html {
     display: grid;
     grid-template-columns: 2fr 2fr 2fr;
     margin: 0;
+    background-color: black;
 }
 
 
@@ -18,11 +19,12 @@ nav {
     display: flex;
     flex-direction: row;
     background-color: gray;
-    width: 99%;
+    width: 100%;
     z-index: +10;
     position: fixed;
     border-radius: 10px;
     height: 15%;
+    left: 0;
 }
 
 ul {
@@ -89,7 +91,7 @@ p {
     display: flex;
     flex-direction: row;
     overflow-x: scroll;
-    gap: 50px;
+    gap: 5px;
     position: relative;
     top: 7rem;
     height: 85vh;
@@ -97,4 +99,19 @@ p {
     overflow-x: hidden;
     
     
+}
+
+#copyright {
+    width: 100%;
+    margin-bottom: auto;
+    background-color: grey;
+    color: purple;
+    padding: 35px;
+    text-align: center;
+    font-weight: 300;
+    opacity: 65%;
+    font-size: 1rem;
+    position: absolute;
+    bottom: -1rem;
+    left: 0;
 }

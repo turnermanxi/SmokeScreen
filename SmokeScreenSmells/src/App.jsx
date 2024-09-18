@@ -35,6 +35,12 @@ function App() {
         </div>
       </div>
 
+      <div id="copyright">
+        <footer>
+        Copyright © 2020 SmokeScreenSmells. All Rights Reserved.
+        </footer>
+      </div>
+
       
     </>
   )
