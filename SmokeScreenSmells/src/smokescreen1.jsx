@@ -29,23 +29,26 @@ const ObjModel = ({url, color}) => {
           
     
           // Rotate the model 90 degrees around the Y-axis
-          ref.current.rotation.y = Math.PI / 2; // 90 degrees in radians
+          ref.current.rotation.y = Math.PI / 7.5; // 90 degrees in radians
+          ref.current.rotation.x = Math.PI / -2;
 
-          const scaleFactor = 650 / size.length();
+          const scaleFactor = 40 / size.length();
           ref.current.scale.set(scaleFactor, scaleFactor, scaleFactor);
 
-          obj.position.y += 800;
-          obj.position.z += 100;
-          obj.position.x += -100;
+          
+
+          obj.position.y += -10;
+          //obj.position.z += 100;
+          //obj.position.x += -100;
         }
       }, [obj, color]);
 
-      //useFrame(() => {
-        //if (ref.current) {
+      useFrame(() => {
+        if (ref.current) {
           // Rotate the object around the X-axis
-         // ref.current.rotation.y += 0.02; // Adjust the rotation speed as needed
-       // }
-     // });
+          ref.current.rotation.z += 0.08; // Adjust the rotation speed as needed
+        }
+      });
 
 
     return <primitive ref={ref} object={obj} />;
@@ -57,7 +60,7 @@ export function Scene1() {
     
     return (
         <Canvas
-        camera={{ position: [-75, 950, 55], fov: 50 }}
+        camera={{ position: [0, 0, 10], fov: 50 }}
         >
             
             <ambientLight intensity = {.5} />
@@ -76,7 +79,7 @@ export function Scene1() {
             />
 
             <pointLight position={[10, 10, 10]} intensity={1} />
-            <ObjModel url="/SmokeScreenC2.obj" color='red'/>
+            <ObjModel url="/SSCentered.obj" color='red'/>
             <OrbitControls />
             
         </Canvas>
