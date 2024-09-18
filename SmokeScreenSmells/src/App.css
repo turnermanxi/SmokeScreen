@@ -42,10 +42,13 @@ li {
    
 }
 
-.logo {
-    width: 55%;
+#canvas2 {
+    width: 60vh;
+    height: 12vh;
+    z-index: +12;
+    position: relative;
+    top: 1rem;
     
-
 }
 
 #canvas-container1 {

@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import { Scene1 } from './smokescreen1.jsx'
 import { Scene2 } from './Akatray.jsx'
+import { Logoscene } from './logo.jsx'
 
 
 
@@ -11,8 +12,8 @@ function App() {
   return (
     <>
       <nav id="header">
-        <div>
-            <img src={'/logo.jpeg'} className="logo" alt="Smokescreen Logo" />
+      <div id="canvas2">
+            <Logoscene />
         </div>
         <ul>
           <li>Products</li>
@@ -33,6 +34,8 @@ function App() {
           <button id="button1">Add To Cart</button>
         </div>
       </div>
+
+      
     </>
   )
 }
