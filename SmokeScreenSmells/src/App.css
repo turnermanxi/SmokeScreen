@@ -8,10 +8,14 @@
 }
 
 html {
-    display: grid;
-    grid-template-columns: 2fr 2fr 2fr;
     margin: 0;
     background-color: black;
+}
+
+body {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: 1fr auto;
 }
 
 
@@ -25,6 +29,8 @@ nav {
     border-radius: 10px;
     height: 15%;
     left: 0;
+    top: 0;
+    margin-bottom: auto;
 }
 
 ul {
@@ -97,21 +103,21 @@ p {
     height: 85vh;
     width: 200vh;
     overflow-x: hidden;
+    left: -4rem;
+    
     
     
 }
 
 #copyright {
     width: 100%;
-    margin-bottom: auto;
     background-color: grey;
     color: purple;
     padding: 35px;
     text-align: center;
     font-weight: 300;
     opacity: 65%;
-    font-size: 1rem;
+    font-size: 1.2rem;
     position: absolute;
-    bottom: -1rem;
     left: 0;
 }
