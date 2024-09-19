@@ -3,6 +3,7 @@ import './App.css'
 import { Scene1 } from './smokescreen1.jsx'
 import { Scene2 } from './Akatray.jsx'
 import { Logoscene } from './logo.jsx'
+import ReactPlayer from 'react-player';
 
 
 
@@ -22,6 +23,13 @@ function App() {
             <li>Gallery</li>
           </ul>
         </nav>
+        <div id="video">
+          <ReactPlayer
+          url="/backgroundvideo.mov"
+          playing={true}
+          loop={true}
+          width='100vh'/>
+        </div>
         <div id="canvases">
           <div id="canvas-container1">
             <Scene1 />

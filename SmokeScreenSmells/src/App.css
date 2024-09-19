@@ -101,7 +101,7 @@ p {
     position: relative;
     top: 7rem;
     height: 85vh;
-    width: 200vh;
+    width: 150vh;
     overflow-x: hidden;
     left: -4rem;
     
@@ -120,4 +120,14 @@ p {
     font-size: 1.2rem;
     position: absolute;
     left: 0;
+    bottom: -100%;
+}
+
+#video {
+    z-index: +9; 
+    position: relative;
+    top: 10%;
+    left: 0;
+    top: 45%;
+    left: 30%;
 }
