@@ -16,6 +16,7 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-rows: 1fr auto;
+    
 }
 
 
@@ -31,6 +32,7 @@ nav {
     left: 0;
     top: 0;
     margin-bottom: auto;
+    box-shadow: 0px 5px 2px rgb(41, 40, 40);
 }
 
 ul {
@@ -74,21 +76,22 @@ li {
     width: 65vh;
     position: relative;
     
-    left: 15rem;
+    left: 1rem;
     text-align: center;
 }
 
 #button1 {
-    background-color: yellow;
-    color: black;
+    color: rgb(85, 84, 84);
     font-family: smokefont;
-    font-size: 1rem;
-    border: 2px solid silver;
+    font-size: 1.8rem;
+    border: 3px solid black;
+    padding: 10px;
+    
 }
 
 p {
     color: red;
-    font-size: 1rem;
+    font-size: 2rem;
     font-weight: 700;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
@@ -126,8 +129,11 @@ p {
 #video {
     z-index: +9; 
     position: relative;
-    top: 10%;
+    top: 35%;
     left: 0;
-    top: 45%;
-    left: 30%;
+    max-width: 100%;
+}
+
+#video video {
+    object-fit: cover;
 }

@@ -28,18 +28,19 @@ function App() {
           url="/backgroundvideo.mov"
           playing={true}
           loop={true}
-          width='100vh'/>
+          width='100%'
+          />
         </div>
         <div id="canvases">
           <div id="canvas-container1">
             <Scene1 />
             <p id="redSS"> RedPuffer: $9.99 </p>
-            <button id="button1">Add To Cart</button>
+            <button id="button1">SHOP</button>
           </div>
-          <div id="canvas-container1">
+          <div id="canvas-container2">
             <Scene2 />
-            <p>Rolling Tray: $19.99</p>
-            <button id="button1">Add To Cart</button>
+            <p>Rolling Tray</p>
+            <button id="button1">3D SOLUTIONS</button>
           </div>
         </div>
       </body>
