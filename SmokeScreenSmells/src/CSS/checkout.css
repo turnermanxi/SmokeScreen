@@ -1,0 +1,135 @@
+.checkout-popup {
+  position: fixed;
+  top: 50%;
+  left: -80%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  max-width: 1300px;
+  height: 80%; /* Adjust height for better flexibility */
+  background-color: #2d2d2d; /* Charcoal grey background */
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto; /* Make it scrollable if the content overflows */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for emphasis */
+  z-index: 1000; /* Ensure it sits on top of other elements */
+}
+
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add spacing between elements */
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+
+
+.total, .shipping-methods, .payment-methods {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="radio"] {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background-color: #333;
+  color: white;
+  width: 100%; /* Make inputs full width for responsiveness */
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="radio"]:checked {
+  background-color: #ff8000;
+}
+
+#ckbuttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 2px solid #f0f0f0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  
+}
+
+button:hover {
+  border: 2px solid #706d6d;
+  font-size: 1.1rem;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkout-popup {
+    width: 95%;
+    height: auto; /* Allow height to adjust on smaller screens */
+    max-width: 700px;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3, h4 {
+    font-size: 1rem;
+  }
+
+  #ckbuttons {
+    flex-direction: column;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-popup {
+    width: 95%;
+    max-width: 100%;
+    height: auto; /* Adjust height even more for small devices */
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"], input[type="email"] {
+    font-size: 0.9rem; /* Smaller text size for smaller screens */
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}
