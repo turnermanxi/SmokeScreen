@@ -64,6 +64,7 @@ const contentStyle = {
   borderRadius: "10px",
   textAlign: "center",
   boxShadow: "0 0 15px rgba(0, 0, 0, 0.5)",
+  color: "#000000",
 };
 
 const buttonContainerStyle = {
