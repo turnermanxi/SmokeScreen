@@ -1,0 +1,192 @@
+.checkout-popup {
+  position: fixed;
+  top: 50%;
+  left: -50%;
+  transform: translate(-50%, -50%);
+  width: 200%;
+  max-width: 1300px;
+  height: 80vh; /* Adjust height for better flexibility */
+  background-color: #2d2d2d; /* Charcoal grey background */
+  color: white;
+  border-radius: 12px;
+  padding: 20px;
+  overflow-y: auto; /* Make it scrollable if the content overflows */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for emphasis */
+  z-index: 9999; /* Ensure it sits on top of other elements */
+  justify-content: center;
+  align-items: center;
+}
+
+.checkout-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* Add spacing between elements */
+}
+
+
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.shipping-options {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates 4 columns */
+  gap: 1rem; /* Space between grid items */
+  max-height: 400px; /* Limit the height */
+  overflow-y: auto; /* Add vertical scrolling if content exceeds max-height */
+  padding: 1rem;
+}
+
+.shipping-info {
+  padding: .4rem;
+  border-radius: 2px;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: #333;
+  text-align: center;
+}
+
+
+.shipping-options ul {
+  padding: 0;
+  margin: 0;
+}
+
+.shipping-options li {
+  list-style-type: none;
+}
+
+.shipping-options label {
+  display: block;
+  background-color: #2d2d2d;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shipping-options label:hover {
+  background-color: #555;
+}
+
+.shipping-options input[type="radio"] {
+  margin-right: 10px;
+}
+
+
+h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+
+.total, .shipping-methods, .payment-methods {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"], input[type="email"], input[type="radio"] {
+  padding: 10px;
+  margin: 8px 0;
+  border-radius: 5px;
+  border: 1px solid #aaa;
+  background-color: #333;
+  color: white;
+  width: 100%; /* Make inputs full width for responsiveness */
+}
+
+input[type="radio"] {
+  width: auto;
+}
+
+input[type="radio"]:checked {
+  background-color: #ff8000;
+}
+
+#ckbuttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+button {
+  background: #333;
+  color: #fff;
+  padding: 1rem 2rem;
+  border: 2px solid #f0f0f0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  border-radius: 10px;
+  
+}
+
+button:hover {
+  border: 2px solid #706d6d;
+  font-size: 1.1rem;
+}
+
+button:disabled {
+  background-color: #555;
+  cursor: not-allowed;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .checkout-popup {
+    top: 50%;
+    left: 50%;
+    width: 95%;
+    height: 100vh; /* Allow height to adjust on smaller screens */
+    max-width: 700px;
+    overflow-y: auto; /* Make it scrollable if the content overflows */
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3, h4 {
+    font-size: 1rem;
+  }
+
+  #ckbuttons {
+    flex-direction: column;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkout-popup {
+    width: 95%;
+    max-width: 100%;
+    left: 50%;
+    overflow-y: auto; /* Make it scrollable if the content overflows */
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  input[type="text"], input[type="email"] {
+    font-size: 0.9rem; /* Smaller text size for smaller screens */
+  }
+
+  button {
+    font-size: 0.9rem;
+  }
+}

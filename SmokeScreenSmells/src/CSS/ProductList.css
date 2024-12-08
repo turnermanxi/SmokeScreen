@@ -1,0 +1,19 @@
+/* ProductList.css */
+.text-center1 {
+    padding-top: .3rem;
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.card-img-top {
+    height: 80%;
+    width: 100%;
+    
+}
+
+.card-scene {
+    height: 20vh;
+}

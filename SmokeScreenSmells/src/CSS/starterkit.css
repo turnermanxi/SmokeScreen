@@ -1,0 +1,242 @@
+body {
+    background: #1c1c1c; /* Charcoal background */
+    color: #f0f0f0; /* Light text */
+  }
+  
+  .starter-kit {
+    text-align: center;
+    margin: 2rem;
+  }
+  
+  .start-kit-button {
+    animation: flash 1s infinite;
+    background: #333;
+    color: #fff;
+    padding: 1rem 2rem;
+    border: 2px solid #f0f0f0;
+    cursor: pointer;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.4);
+  }
+  
+.start-kit-container {
+    padding-bottom: 30rem;
+}
+
+#starter-header h2 {
+    padding-bottom: 6rem;
+    font-size: 3rem;
+}
+
+#starter-header2 h2 {
+    padding: 6rem;
+    font-size: 3rem;
+    padding-top: 3rem;
+}
+
+  @keyframes flash {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.6; }
+  }
+  
+  .carousel {
+    margin-top: 2rem;
+  }
+  
+  .carousel h2 {
+    font-size: 2rem;
+    color: #fff;
+    text-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+  }
+  
+  .carousel-items {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    background: #333;
+    border: 2px solid #444;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1);
+   
+  }
+  
+  .product-card:hover {
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  }
+  
+  .product-card h3 {
+    color: #fff;
+    font-size: 1.2rem;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.8);
+  }
+  
+  .product-card .description {
+    color: #aaa;
+    font-size: 0.9rem;
+  }
+  
+  .product-card .price {
+    color: #00ffcc;
+    font-size: 1.1rem;
+    margin: 0.5rem 0;
+  }
+  
+  .product-image {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 0.5rem;
+  }
+  
+  .product-card button {
+    background: #00ffcc;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+  
+  .product-card button:hover {
+    background: #009977;
+  }
+  
+  .popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #222222;
+    padding: 2rem;
+    border: 2px solid #444;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    z-index: 1000;
+  }
+  
+  .popup-buttons {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1rem;
+    gap: 1rem;
+  }
+  
+  .popup-buttons button {
+    background: #00ffcc;
+    color: #000;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .popup-buttons button:hover {
+    background: #009977;
+  }
+
+  .info-card {
+    background: #333;
+    color: #f0f0f0;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 1rem auto;
+    max-width: 800px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+  }
+  
+  .info-card h2 {
+    font-size: 2rem;
+    color: #00ffcc;
+    text-shadow: 0 0 15px rgba(0, 255, 200, 0.8);
+  }
+  
+  .carousel-items {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .product-card {
+    background: #333;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 250px;
+    text-align: center;
+    box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.1);
+    
+  }
+  
+  .product-card:hover {
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.4);
+  }
+  
+  .product-card h3 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    text-shadow: 0px 0px 10px rgba(237, 238, 238, 0.8);
+  }
+  
+  .product-card button {
+    padding: 1rem;
+    border: 5px transparent; /* Transparent to let the gradient show */
+    border-radius: 15px;
+    text-decoration: none;
+    color: white;
+    position: relative; /* Needed for the gradient overlay */
+    z-index: 1;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth color transitions */
+  }
+
+  .product-card button::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(45deg, #ff0000, #00ff00, #0000ff, #ff0000); /* RGB gradient */
+    background-size: 300% 300%;
+    z-index: -1;
+    border-radius: 20px;
+    animation: rgbBorderRotate 4s linear infinite; /* Smooth rotating animation */
+
+  }
+  
+  .product-card button:hover {
+    background:#1c1c1c;
+    color: white;
+  }
+
+  .product-price {
+    color: white;
+  }
+  
+  
+  #description-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #smokebombsection {
+    max-width: 800px;
+    text-align: center;
+    background: rgba(50, 50, 50, 0.9);
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+    color:#fff;
+  }
