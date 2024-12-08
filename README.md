@@ -1,36 +1,62 @@
 Smokescreens: Secondhand Smoke Filters
-A modern solution for tobacco and weed smokers who want to keep their surroundings fresh.
+
+
+
+A sleek and modern e-commerce app showcasing Smokescreens, innovative filters for eliminating secondhand smoke odors.
 
 Overview
-Smokescreens is an innovative product designed to eliminate the smell of secondhand smoke. This project showcases both the product and advanced web development skills, featuring a fully interactive 3D experience and e-commerce functionality.
+Smokescreens is not just a product but an experience. This app demonstrates a mix of cutting-edge tech and a 3D-powered interactive store, built to deliver an engaging user experience.
 
-Features
-Starter Kit: Includes two types of Smokescreens with customizable colors and accessories. Ideal for first-time users.
-Interactive 3D Product Showcase: View and interact with Smokescreens in a virtual store.
-Bookshelf Display: A unique 3D visualization featuring a virtual shelf where six Smokescreen products are showcased, each with its own label and for-sale tag.
-Responsive Design: Optimized for all devices to ensure seamless user experience.
-E-Commerce Functionality: Browse, customize, and purchase products easily.
-3D Features
-Fusion 360 Models: Smokescreens and the bookshelf were modeled using Autodesk Fusion 360 to ensure precision and realism.
-React Three Fiber Integration: Smokescreens and accessories are rendered in a dynamic 3D environment. Users can rotate, zoom, and interact with the models.
-Custom Textures and Animations: Product details are displayed directly on the 3D objects using canvas textures for a clean and modern aesthetic.
-Technologies Used
-Frontend: React, React Three Fiber, Tailwind CSS
-3D Modeling: Autodesk Fusion 360, Three.js
-Backend: Node.js, Express
-Database: MongoDB
-Hosting: AWS, Vercel
-Starter Kit
-The Smokescreens Starter Kit is perfect for new users, featuring:
+Key Features
+Starter Kit: Includes two filter types (Compact and Premium) with full color customization.
+3D Virtual Store: Interact with products in a detailed 3D environment.
+Bookshelf Display: View six products with interactive labels and pricing.
+Responsive Design: Mobile and desktop-friendly layout.
 
-Two types of Smokescreen filters:
-Compact: Portable and lightweight.
-Premium: Long-lasting with advanced filtering.
-Customization options for colors and branding.
-Bookshelf Display
-The Smokescreens virtual store includes a bookshelf visualization where users can:
+⚙️ Tech Stack
 
-Browse six displayed Smokescreens in 3D.
-View product labels, including names, features, and prices.
-Select and purchase products directly from the 3D environment.
+Category:	Tools/Frameworks
 
+Frontend:	React, React Three Fiber, Tailwind CSS
+
+3D Modeling:	Autodesk Fusion 360, Three.js
+
+Backend:	Node.js, Express
+
+Database:	MongoDB
+
+Hosting:	Render
+
+ 
+Screenshots
+Starter Kit Example
+
+![image](https://github.com/user-attachments/assets/823b4901-26d9-47d0-8fc2-8dace0795b07)
+
+![image](https://github.com/user-attachments/assets/0f0c8888-b2bd-4416-ad34-0d7f7ea476d0)
+
+
+
+3D Bookshelf Display
+
+![image](https://github.com/user-attachments/assets/bfbe3e03-5e6b-4b4a-930b-97d1b5e42672)
+
+
+Live Demo
+Check out the live app here: [Smokescreens Demo](https://smokescreensmells.netlify.app/)
+
+Future Enhancements
+
+More Customizations: Expand color and accessory options. 3d Ferris wheel with products on display to distribute coupons
+
+Payment Gateway Integration: Add PayPal and more.
+
+Enhanced Animations: Make interactions smoother.
+
+Adding more products:  Trays and more scented Smokebomb smells
+
+
+
+About the Creator
+
+This project was built by Chris T, a passionate developer blending 3D creativity and web development to deliver compelling solutions.
