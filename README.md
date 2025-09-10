@@ -1,31 +1,135 @@
 Smokescreens: Secondhand Smoke Filters
 
+# SmokescreenSmells
 
+Full‑stack React + Node app for a small e‑commerce product line (second‑hand smoke filters). Built with **Vite**, **Express**, and **Render** (server) + **Netlify/Vercel** style static hosting for the client.
 
-A sleek and modern e-commerce app showcasing Smokescreens, innovative filters for eliminating secondhand smoke odors.
+## Why this exists
+I wanted a fast, simple storefront I could fully control—no heavy CMS—plus room for custom UI and future 3D product previews.
 
-Overview
-Smokescreens is not just a product but an experience. This app demonstrates a mix of cutting-edge tech and a 3D-powered interactive store, built to deliver an engaging user experience.
+## Tech Stack
+- **Frontend:** React (Vite), React Router, Context/Reducer state, CSS modules (or vanilla CSS)
+- **Backend:** Node.js, Express, REST endpoints
+- **Build/Deploy:** Vite, Render (server), Netlify/Vercel (client)
+- **Other:** Axios/fetch, dotenv, ESLint/Prettier
+- **(Optional)** Square/Payments, MongoDB/Postgres (swap depending on deployment)
 
-Key Features
-Starter Kit: Includes two filter types (Compact and Premium) with full color customization.
-3D Virtual Store: Interact with products in a detailed 3D environment.
-Bookshelf Display: View six products with interactive labels and pricing.
-Responsive Design: Mobile and desktop-friendly layout.
+## Key Features
+- Product catalog with filtering & “quick view”
+- Cart & checkout flow (client-side)
+- Contact & order logging endpoint (server)
+- Basic rate limiting & input validation on API routes
+- Environment‑based config for local vs production
 
-⚙️ Tech Stack
+## Project Structure
+```
+/client            # React app (Vite)
+  src/
+    components/
+    pages/
+    hooks/
+    styles/
+  index.html
+  vite.config.ts/js
+/server            # Express API
+  src/
+    routes/
+    controllers/
+    middleware/
+  package.json
+README.md
+```
 
-Category:	Tools/Frameworks
+## Getting Started
 
-Frontend:	React, React Three Fiber, Tailwind CSS
+### 1) Clone and install
+```bash
+git clone <repo-url>
+cd server && npm i
+cd ../client && npm i
+```
 
-3D Modeling:	Autodesk Fusion 360, Three.js
+### 2) Env
+Create **server/.env**:
+```
+PORT=8080
+NODE_ENV=development
+ALLOWED_ORIGINS=http://localhost:5173
+# If using a DB or Stripe:
+# DATABASE_URL=...
+# STRIPE_SECRET_KEY=...
+```
 
-Backend:	Node.js, Express
+Create **client/.env**:
+```
+VITE_API_BASE=http://localhost:8080
+```
 
-Database:	MongoDB
+### 3) Run locally
+```bash
+# in one terminal
+cd server
+npm run dev      # nodemon src/index.js
 
-Hosting:	Render
+# in another terminal
+cd client
+npm run dev      # vite
+```
+Open `http://localhost:5173`.
+
+## Scripts (suggested)
+**server/package.json**
+```json
+{
+  "scripts": {
+    "dev": "nodemon src/index.js",
+    "start": "node src/index.js",
+    "lint": "eslint ."
+  }
+}
+```
+
+**client/package.json**
+```json
+{
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "lint": "eslint ."
+  }
+}
+```
+
+## API (examples)
+```
+GET  /api/products
+POST /api/orders        # body: { items: [{id, qty}], contact: {name,email} }
+POST /api/contact       # body: { name, email, message }
+```
+Responses are JSON. Set `Content-Type: application/json` in the client and do **either** `await res.json()` or `JSON.parse(await res.text())`, not both.
+
+## Deployment
+- **Server (Render):** connect repo → pick root `/server` → set env vars → deploy.
+- **Client (Netlify/Vercel):** connect repo → root `/client` → build `npm run build`, publish `dist/`.
+- Configure CORS to allow the client origin.
+
+## Testing
+- Add Jest + React Testing Library for components
+- Supertest for API routes
+
+## Performance & A11y
+- Image lazy‑loading, route‑based code splitting
+- Landmarks, focus states, and keyboard navigation verified
+
+## Roadmap
+- Persisted cart (localStorage + server order draft)
+- Admin dashboard (orders, inventory)
+- Optional payments integration
+- 3D product preview (R3F) with lightweight models
+
+## License
+MIT
 
  
 Screenshots
